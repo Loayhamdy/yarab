@@ -2,13 +2,11 @@ from google_play_scraper import Sort, reviews, app
 
 def get_reviews(app_ID):
 
-    
-    app_ID = app_ID
     app_reviews = []
 
     for sort_order in [Sort.MOST_RELEVANT, Sort.NEWEST]:
         rvs, _ = reviews(
-        str(app_ID),
+        app_ID,
         lang='en',
         country='us',
         sort=sort_order,
